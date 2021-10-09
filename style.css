@@ -1,0 +1,40 @@
+body{margin:8%}
+input{width: 250px;
+     height: 50px;
+     font-size: 21px;
+     background-color: gray;
+     border: maroon 3px solid;
+     border-radius: 10px;
+     padding-left: 18px;
+     color: white;}
+   input:focus{transition: width linear 1s;
+        width: 40%;
+        background-color: brown;}  
+
+   ::placeholder{color: aquamarine;}
+ 
+ input:hover{background-color: darkmagenta;}  
+   
+
+ 
+button{width: 130px;
+      height: 55px;
+      background-color: mediumblue;
+      color: white;
+      /* border-radius: 8px; */
+      font-size: 22px;
+      font-weight: 700;
+    }
+ button:hover{background-color: red;}
+ 
+ 
+
+ .newTag{
+     display: grid;
+     grid-template-columns: repeat(3fr);
+     grid-gap: 10px;
+     border: 2px red solid;
+     padding:10px;
+     margin: 5px;
+
+ }
