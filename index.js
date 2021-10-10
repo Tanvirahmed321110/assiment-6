@@ -6,7 +6,7 @@ document.getElementById('button').addEventListener('click',function(){
     input.value=''
     
 
-    const url=`https://openlibrary.org/search.json?q=javascript
+    const url=`https://openlibrary.org/search.json?q=${inputValue}
 
     `
     fetch(url)
@@ -16,13 +16,28 @@ document.getElementById('button').addEventListener('click',function(){
 
 
 const displayShow=(infor)=>{
+    const mainTag=document.getElementById('div')
+    mainTag.textContent=''
    for(const info of infor){
-       const mainTag=document.getElementById('div')
        const newTag=document.createElement('div')
-       const newTagClass=newTag.classList.add('new-Tag')
-       newTag.innerHTML=`<h3>${info.title}</h3>
-                         <p>${info.author_name}</p>  `
-       console.log(info.title)
-   }
-   
+       newTag.classList.add('new-tag')
+       newTag.innerHTML=`<h3>title : ${info.title}</h3>
+                         <p><h4>author Name</h4> :  ${info.author_name}</p>  
+                         <p><h4>first publish</h4> : ${info.publish_year}</p>
+                         <p><h4>publish date</h4> :  ${info.publish_date}</p>
+                         <button onclick="btn('${info.seed}')">Details</button>
+                           `
+       mainTag.appendChild(newTag)
+       console.log(info)
+    }
 }
+
+
+const btn=seed=>{
+    const main=document.getElementById('main')
+    const tag=document.createElement('p')
+    tag.innerHTML=`<p>${seed}</p>`
+    main.appendChild(tag)
+    console.log(seed)
+}
+

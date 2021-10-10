@@ -1,5 +1,5 @@
 body{margin:8%}
-input{width: 250px;
+input{width: 650px;
      height: 50px;
      font-size: 21px;
      background-color: gray;
@@ -8,7 +8,7 @@ input{width: 250px;
      padding-left: 18px;
      color: white;}
    input:focus{transition: width linear 1s;
-        width: 40%;
+        width: 80%;
         background-color: brown;}  
 
    ::placeholder{color: aquamarine;}
@@ -27,14 +27,19 @@ button{width: 130px;
     }
  button:hover{background-color: red;}
  
- 
 
- .newTag{
-     display: grid;
-     grid-template-columns: repeat(3fr);
-     grid-gap: 10px;
+
+ .new-tag{
      border: 2px red solid;
+     border-radius: 10px;
+     background-color: coral;
      padding:10px;
      margin: 5px;
 
  }
+
+h4{display: inline;}
+
+#div{   display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap: 10px;}
